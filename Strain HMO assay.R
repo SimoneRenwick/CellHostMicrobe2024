@@ -328,15 +328,7 @@ hmo$Phylum <- info$Phylum[match(hmo$SpeciesI, info$Simplified)]
 ## Generate heatmaps for all taxa within each phyla for supplementary data
 HMO_phylum <- subset(hmo, hmo$Phylum == "Firmicutes")
 
-list <- unique(HMO_phylum$SpeciesI)
-list <- sort(list)
-list2 <- list[1:82]
-list3 <- list[83:164]
-list4 <- list[165:204]
-
-HMO_phylum4 <- subset(HMO_phylum, HMO_phylum$SpeciesI %in% list4)
-
-p <- ggplot(HMO_phylum4, aes(x=HMO, y=SpeciesI, fill=Degradation)) +
+p <- ggplot(HMO_phylum, aes(x=HMO, y=SpeciesI, fill=Degradation)) +
   geom_tile(color = "white",
             lwd = 1.5,
             linetype = 1) +
@@ -344,7 +336,7 @@ p <- ggplot(HMO_phylum4, aes(x=HMO, y=SpeciesI, fill=Degradation)) +
   scale_fill_gradient(low = "white", high = '#0c65fa') +
   theme_bw() +
   #scale_fill_continuous(limits=c(0, 100)) +
-  scale_y_discrete(limits = rev(unique(sort(HMO_phylum4$SpeciesI)))) +
+  scale_y_discrete(limits = rev(unique(sort(HMO_phylum$SpeciesI)))) +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 
 p
