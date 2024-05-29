@@ -1,5 +1,5 @@
-# CellHostMicrobe2024
-R scripts for performing bioinformatics analyses in Renwick et al. 2024 Cell Host Microbe - Modulating the developing gut microbiota with 2’-fucosyllactose and pooled human milk oligosaccharides.
+# Microbiome2024
+R scripts for performing bioinformatics analyses in Renwick et al. 2024 Microbiome - Modulating the developing gut microbiota with 2’-fucosyllactose and pooled human milk oligosaccharides.
 
 Description of scripts:
 
